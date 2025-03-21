@@ -15,9 +15,9 @@ class PlayerResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'name' => $this->name,
-            'rank' => $this->rank,
-            'status' => $this->status_text
+            'name' => $this->name ?? '',
+            'rank' => $this->rank ?? '',
+            'status' => $this->status_text ?? '',
         ];
     }
 }
